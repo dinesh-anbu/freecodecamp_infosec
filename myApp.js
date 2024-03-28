@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 
 app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({ action: 'deny' }));
+app.use(helmet.xssFilter());
 
 module.exports = app;
 const api = require('./server.js');
