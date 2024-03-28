@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(helmet());
+app.use(helmet.hidePoweredBy());
 
 module.exports = app;
 const api = require('./server.js');
